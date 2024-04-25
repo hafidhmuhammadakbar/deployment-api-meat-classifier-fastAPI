@@ -77,7 +77,3 @@ async def predict(data: dict):
     probabilities_class = '%.2f' % probabilities.numpy()[0]
 
     return {'predicted_class': predicted_class, 'probabilities': probabilities_class}
-
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, port=8000)
